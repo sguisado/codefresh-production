@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: production
-  namespace: production
+  namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -11,8 +11,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: applications
-    repoURL: https://github.com/sguisado/spring-helm
+    path: apps
+    repoURL: https://github.com/sguisado/codefresh-production
     targetRevision: HEAD
   syncPolicy:
     automated:
