@@ -17,5 +17,5 @@ spec:
     helm:
       values: |
         image:
-          tag: latest
+          tag: "1.0"
       version: v3
