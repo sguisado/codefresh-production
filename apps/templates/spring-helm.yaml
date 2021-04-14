@@ -15,7 +15,7 @@ spec:
     helm:
       values: |
         image:
-          tag: 7013054
+          tag: "cac231b"
       version: v3
     path: helm
     repoURL: https://github.com/sguisado/spring-helm
