@@ -14,7 +14,3 @@ spec:
     path: apps
     repoURL: https://github.com/sguisado/codefresh-production
     targetRevision: HEAD
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
