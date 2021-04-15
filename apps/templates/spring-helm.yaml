@@ -10,13 +10,30 @@ spec:
   destination:
     namespace: production
     server: https://kubernetes.default.svc
+  ignoreDifferences:
+  - group: networking.istio.io
+    jsonPointers:
+    - /spec/http
+    kind: VirtualService
   project: default
   source:
     helm:
       values: |
         image:
-          tag: "cac231b"
+          tag: "d19df8f"
+        ingress:
+          enabled: false
+          host: spring-helm.35.197.205.55.xip.io
+        istio:
+          enabled: true
+        hpa: true
+        rollout:
+          enabled: true
       version: v3
     path: helm
     repoURL: https://github.com/sguisado/spring-helm
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
