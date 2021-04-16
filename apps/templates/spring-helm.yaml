@@ -20,7 +20,7 @@ spec:
     helm:
       values: |
         image:
-          tag: "15daee6"
+          tag: "7dd0218"
         ingress:
           enabled: false
           host: spring-helm.35.197.205.55.xip.io
