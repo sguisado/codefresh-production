@@ -20,7 +20,9 @@ spec:
     helm:
       values: |
         image:
-          tag: "58b9e4d"
+          tag: "0cfb6c5"
+        service:
+          targetPort: 8080
         ingress:
           enabled: false
           host: spring-helm.35.197.205.55.xip.io
