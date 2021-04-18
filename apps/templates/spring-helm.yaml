@@ -20,7 +20,7 @@ spec:
     helm:
       values: |
         image:
-          tag: "0cfb6c5"
+          tag: "06148de"
         service:
           targetPort: 8080
         ingress:
